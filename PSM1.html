@@ -1,43 +1,79 @@
 <!DOCTYPE html>
-<br lang="en">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="st.css">
 </head>
-<br>
-    <br>
-        Entr Name: <input type = "text" name = "user"> <br> <br>
-        Enter Password: <input type = "Password" name="Password"> <br> <br>
-        Enter Value : <input type = "tel" name ="mobile" placeholder = "Enter the value number"> <br><br>
-        Enter Email: <input type = "Email" name = "Email"> <br> <br>
-        Enter Number: <input type = "Number" name = "Number"> <br> <br>
-        Enter DOB: <iput type = "date" name ="Birthdate"> <br> <br>
-        Upload File: <input type="file" name ="profile picture"> <br> <br>
-        Male<input type = "radio" name="gender" value="male">  <br><br>
-        Female<input type = "radio" name="gender" value="female"> <br><br>
-        <label> List OF Vesgitable </label>
-        <input type = "checkbox" name = "veg" value = "apple"> apple
-        <input type = "checkbox" name = "veg" value = "orange">orange
-        <input type = "checkbox" name = "veg" value = "banana">banana <br><br>
-        <input type = "submit" name = "submit" > <br><br>
-        <input type = "button" name = "button" value = "login"> <br><br>
-        Range: <input type = "range" name = "r"  main= "10"  max="100" value="20"> 
-        
 
-<form action="/action_page.php"> <br><br>
-    <label for="Vegatables">Choose Vegitable :</label> 
-    <select id="Vegitable" name="Vegitable">
-      <option value="volvo">Apple</option>
-      <option value="saab">Orange</option>
-      <option value="mercedes">Banana</option>
-      <option value="audi">Pomo</option>
-    </select>
-    <input type="submit">
-  
+<body>
+    <div class="input-box">
+        <br action="/action_page.php" method="post">
+            <label for="user">Enter Name:</label><br>
+            <input type="text" id="user" name="user"><br> <br>
 
+            <label for="Password">Enter Password:</label><br>
+            <input type="password" id="Password" name="Password">
+            <img src="eye-close.png" id="eyeicon" onclick="togglePasswordVisibility()">
+            <br><br>
 
+            <label for="mobile">Enter Value:</label><br>
+            <input type="tel" id="mobile" name="mobile" placeholder="Enter the value number"><br><br>
 
-    </form>
+            <label for="Email">Enter Email:</label><br>
+            <input type="email" id="Email" name="Email"><br><br>
+
+            <label for="Number">Enter Number:</label><br>
+            <input type="number" id="Number" name="Number"><br><br>
+
+            <label for="Birthdate">Enter DOB:</label><br>
+            <input type="date" id="Birthdate" name="Birthdate"><br><br>
+
+            <label>Upload File:</label><br>
+            <input type="file" id="profilePicture" name="profilePicture"><br><br>
+
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male">Male<br>
+            <input type="radio" id="female" name="gender" value="female">Female<br><br>
+
+            <label>List of Vegetables:</label><br>
+            <input type="checkbox" id="apple" name="veg" value="apple">Apple<br>
+            <input type="checkbox" id="orange" name="veg" value="orange">Orange<br>
+            <input type="checkbox" id="banana" name="veg" value="banana">Banana<br><br>
+
+            <input type="submit" name="submit"><br><br>
+            <input type="button" name="button" value="Login"><br><br>
+
+            <label for="r">Range:</label><br>
+            <input type="range" id="r" name="r" min="10" max="100" value="20"><br><br>
+        </form>
+
+        <label for="Vegitable">Choose Vegetable:</label>
+        <select id="Vegitable" name="Vegitable">
+            <option value="apple">Apple</option>
+            <option value="orange">Orange</option>
+            <option value="banana">Banana</option>
+            <option value="pomo">Pomo</option>
+        </select>
+        <input type="submit"> <br> <br> <br> <br> <br>
+    </div>
+
+    <script>
+        function togglePasswordVisibility() {
+            var password = document.getElementById("Password");
+            var eyeicon = document.getElementById("eyeicon");
+
+            if (password.type === "password") {
+                password.type = "text";
+                eyeicon.src = "eye-open.png"; // Replace with your open eye icon path
+            } else {
+                password.type = "password";
+                eyeicon.src = "eye-close.png"; // Replace with your closed eye icon path
+            }
+        }
+    </script>
 </body>
+
 </html>
