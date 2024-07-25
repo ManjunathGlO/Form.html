@@ -1,4 +1,4 @@
-# User Registration form 
+# User Registration form HTML
 
 This repository contains an example of an HTML form with various input fields and interactive elements.
 
